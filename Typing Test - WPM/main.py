@@ -55,7 +55,10 @@ def wpm_test(stdscr):
             key = stdscr.getkey()
         except:
             continue
-
+        
+        if current_text == []:
+            start_time = time.time()
+            
         if ord(key) == 27:
             break
         if key in ('KEY_BACKSPACE', '\b', '\x7f'):
